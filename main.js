@@ -11,7 +11,7 @@ let txtLogs = [];
 let txtLogsApp = [];
 app.get("/", (request, response) => {
     const template = fs.readFileSync("template.ejs","utf-8");
-    const html = ejs.render(template, {txtLogs: txtLogs});
+    const html = ejs.render(template, {txtLogs: txtLogsApp});
     response.send(html);
 });
 
